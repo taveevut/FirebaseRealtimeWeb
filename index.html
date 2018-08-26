@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FirebaseRealTimeWeb</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Firebase - RealTime Database On Web</h2>
+    <hr>
+    <div class="row">
+      <div class="col-md-7">
+        <div class="row">
+          <div class="col-md-12">
+            <form id="fruit-form" method="POST" action="#">
+              <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter name">
+              </div>
+              <div class="form-group">
+                <label>Details</label>
+                <textarea name="details" class="form-control" cols="30" rows="10" placeholder="Enter details"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Save</button>
+              <button type="button" class="btn btn-danger" onclick="delOnClick();">Delete</button>
+              <button type="button" class="btn btn-info" onclick="updataData();">Update</button>
+              <button type="reset" class="btn btn-default">Reset</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAoOQAXbxnXw1N8a8nTNsoaRO2fNDWmE1Q",
+      authDomain: "fir-realtimeweb-34e2d.firebaseapp.com",
+      databaseURL: "https://fir-realtimeweb-34e2d.firebaseio.com",
+      projectId: "fir-realtimeweb-34e2d",
+      storageBucket: "",
+      messagingSenderId: "310698177739"
+    };
+    firebase.initializeApp(config);
+  </script>
+</body>
+
+</html>
